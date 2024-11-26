@@ -1,13 +1,62 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  font-size: 2em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: rgb(0,91,150);
+  background: linear-gradient(0deg, #03396c 0%, rgba(1,31,75,1) 75%);
+  color:#6497b1;
+}
+
+#topo{
+  font-family: Impact, fantasy;
+  padding: 3.5vh;
+  letter-spacing: 2vh;
+  word-spacing: 2vh;
+  font-size: 3em;
+  background-color: 	#b3cde0;
+}
+
+#topo a:link, #topo a:visited{
+  color: #011f4b;
+}
+
+#topo a:hover, #topo a:active{
+  color: #005b96;
+}
+
+#menu{
+  padding: 1.5vh;
+  font-family: Impact, fantasy;
+  background-color: #011f4b;
+}
+
+nav {
+  text-align: center;
+  word-spacing: 50px;
+}
+
+/* unvisited link */
+a:link,a:visited {
+  color: #6497b1;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover,a:active {
+  color: #005b96;
+  text-decoration: none;
+}
+
+div{
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  display: flex;
 }
