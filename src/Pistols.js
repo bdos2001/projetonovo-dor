@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 const API_URL = "https://bymykel.github.io/CSGO-API/api/en/skins.json";
+
+
 
 const Pistols = () => {
     const [Pistols, setPistols] = useState([])
     const [Loading, setLoading] = useState(true)
+
     useEffect(() => {
         const fetchPistols = async () => {
             try {
@@ -26,17 +31,36 @@ const Pistols = () => {
             <div>A carregar...</div>
         )
     }
-    return(
-        <div class="container">
+
+    /*if (pistols.weapon.name === "Glock-18"){
+        glockImgs.push(pistols.image)
+    }*/
+
+    return (
+        <>
             <h1>Pistols</h1>
-            <ul>
-                {Pistols.map((pistol)=>(
-                    <li key={pistol.id}>
-                        <img src={pistol.image} width="50%" height="50%"></img>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+            <div className="Galeria">
+
+                {(() => {
+                    const glockImgs = []; 
+                    Pistols.forEach((pistols) => {
+                        if (pistols.weapon.name === "Glock-18") {
+                            glockImgs.push(pistols.image);
+                        }
+                    });
+                    const randomIndex1 = Math.floor(Math.random() * glockImgs.length);
+
+                    return (
+                        <div className="ItemDaGaleria">
+                            <Link to="Glock18"><img src={glockImgs[randomIndex1]} alt="Glock-18" /><p>Glock-18</p></Link> { }
+                        </div>
+                    );
+
+                    return null;
+                })()}
+            </div>
+        </>
+
+    );
 }
 export default Pistols;
