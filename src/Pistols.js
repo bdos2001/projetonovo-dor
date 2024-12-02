@@ -32,7 +32,7 @@ const Pistols = () => {
             <ul>
                 {Pistols.map((pistol)=>(
                     <li key={pistol.id}>
-                        <img src={pistol.image} width="500" height="600"></img>
+                        <img src={pistol.image} width="50%" height="50%"></img>
                     </li>
                 ))}
             </ul>
