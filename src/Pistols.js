@@ -58,8 +58,8 @@ const Pistols = () => {
                     });
                     const randomIndex1 = Math.floor(Math.random() * glockImgs.length);
                     const randomIndex2 = Math.floor(Math.random() * uspsImgs.length);
-                    const randomIndex4 = Math.floor(Math.random() * p250Imgs.length);
                     const randomIndex3 = Math.floor(Math.random() * p2000Imgs.length);
+                    const randomIndex4 = Math.floor(Math.random() * p250Imgs.length);
 
                     return (
                         <>
@@ -70,10 +70,10 @@ const Pistols = () => {
                                 <Link to="USPs"><img src={uspsImgs[randomIndex2]} alt="USP-S" /><p>USP-S</p></Link> { }
                             </div>
                             <div className="ItemDaGaleria">
-                                <Link to="P2000"><img src={p2000Imgs[randomIndex2]} alt="P2000" /><p>P2000</p></Link> { }
+                                <Link to="P2000"><img src={p2000Imgs[randomIndex3]} alt="P2000" /><p>P2000</p></Link> { }
                             </div>
                             <div className="ItemDaGaleria">
-                                <Link to="P250"><img src={p250Imgs[randomIndex2]} alt="P250" /><p>P250</p></Link> { }
+                                <Link to="P250"><img src={p250Imgs[randomIndex4]} alt="P250" /><p>P250</p></Link> { }
                             </div>
                         </>
                     );
