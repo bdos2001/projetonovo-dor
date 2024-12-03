@@ -38,8 +38,8 @@ const Pistols = () => {
             <div className="Galeria">
 
                 {(() => {
-                    const glockImgs = []; 
-                    const uspsImgs = []; 
+                    const glockImgs = [];
+                    const uspsImgs = [];
                     Pistols.forEach((pistols) => {
                         if (pistols.weapon.name === "Glock-18") {
                             glockImgs.push(pistols.image);
@@ -59,7 +59,7 @@ const Pistols = () => {
                             <div className="ItemDaGaleria">
                                 <img src={uspsImgs[randomIndex2]} alt="USP-S" /><p>USP-S</p>
                             </div>
-                            </>
+                        </>
                     );
 
                     return null;
