@@ -32,10 +32,6 @@ const Pistols = () => {
         )
     }
 
-    /*if (pistols.weapon.name === "Glock-18"){
-        glockImgs.push(pistols.image)
-    }*/
-
     return (
         <>
             <h1>Pistols</h1>
