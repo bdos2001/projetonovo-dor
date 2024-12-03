@@ -8,6 +8,7 @@ const API_URL = "https://bymykel.github.io/CSGO-API/api/en/skins.json";
 const MyLoadout = () => {
     const [MyLoadout, setMyLoadout] = useState([])
     const [Loading, setLoading] = useState(true)
+    const [Imagem, setImagem] = useState('')
 
     useEffect(() => {
         const fetchMyLoadout = async () => {
@@ -37,6 +38,7 @@ const MyLoadout = () => {
             <div className="Galeria">
 
                 {(() => {
+                    
                     const Glock = [];
                     MyLoadout.forEach((MyLoadout) => {
                         if (MyLoadout.weapon.name === "Glock-18") {
@@ -44,13 +46,15 @@ const MyLoadout = () => {
                         }
                     });
 
+                    //setImagem(Glock[0].image);
+
                     return (
                         <>
                             <div className="ItemDaGaleria">
                                 <img src={Glock[0].image}></img>
                                 <select>
                                     {Glock.map((glock18) => (
-                                        <>  
+                                        <>
                                             <option value={glock18.name} id="glock" >{glock18.name}</option>
                                         </>
                                     ))
