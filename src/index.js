@@ -16,6 +16,16 @@ import P2000 from './P2000';
 import DualBerettas from './DualBerettas';
 import CZ75Auto from './CZ75Auto';
 import Tec9 from './Tec9';
+import FiveSeveN from './FiveSeveN';
+import DesertEagle from './DesertEagle';
+import R8Revolver from './R8Revolver';
+import MAC10 from './MAC10';
+import MP5 from './MP5';
+import MP7 from './MP7';
+import MP9 from './MP9';
+import PPBizon from './PPBizon';
+import P90 from './P90';
+import UMP from './UMP';
 import MyLoadout from './MyLoadout';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -43,6 +53,16 @@ root.render(
           <Route path="Pistols/DualBerettas" element={<DualBerettas />} />
           <Route path="Pistols/CZ75Auto" element={<CZ75Auto />} />
           <Route path="Pistols/Tec9" element={<Tec9 />} />
+          <Route path="Pistols/FiveSeveN" element={<FiveSeveN />} />
+          <Route path="Pistols/DesertEagle" element={<DesertEagle />} />
+          <Route path="Pistols/R8Revolver" element={<R8Revolver />} />
+          <Route path="SMGs/MAC10" element={<MAC10 />} />
+          <Route path="SMGs/MP5" element={<MP5 />} />
+          <Route path="SMGs/MP7" element={<MP7 />} />
+          <Route path="SMGs/MP9" element={<MP9 />} />
+          <Route path="SMGs/PPBizon" element={<PPBizon />} />
+          <Route path="SMGs/P90" element={<P90 />} />
+          <Route path="SMGs/UMP" element={<UMP />} />
         </Route>
       </Routes>
     </BrowserRouter>

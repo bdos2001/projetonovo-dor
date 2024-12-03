@@ -45,6 +45,10 @@ const Pistols = () => {
                     const dualberettasImgs = [];
                     const cz75autoImgs = [];
                     const tec9Imgs = [];
+                    const fivesevenImgs = [];
+                    const deserteagleImgs = [];
+                    const r8revolverImgs = [];
+
                     Pistols.forEach((pistols) => {
                         if (pistols.weapon.name === "Glock-18") {
                             glockImgs.push(pistols.image);
@@ -67,6 +71,15 @@ const Pistols = () => {
                         if (pistols.weapon.name === "Tec-9") {
                             tec9Imgs.push(pistols.image);
                         }
+                        if (pistols.weapon.name === "Five-SeveN") {
+                            fivesevenImgs.push(pistols.image);
+                        }
+                        if (pistols.weapon.name === "Desert Eagle") {
+                            deserteagleImgs.push(pistols.image);
+                        }
+                        if (pistols.weapon.name === "R8 Revolver") {
+                            r8revolverImgs.push(pistols.image);
+                        }
                     });
                     const randomIndex1 = Math.floor(Math.random() * glockImgs.length);
                     const randomIndex2 = Math.floor(Math.random() * uspsImgs.length);
@@ -75,6 +88,9 @@ const Pistols = () => {
                     const randomIndex5 = Math.floor(Math.random() * dualberettasImgs.length);
                     const randomIndex6 = Math.floor(Math.random() * cz75autoImgs.length);
                     const randomIndex7 = Math.floor(Math.random() * tec9Imgs.length);
+                    const randomIndex8 = Math.floor(Math.random() * fivesevenImgs.length);
+                    const randomIndex9 = Math.floor(Math.random() * deserteagleImgs.length);
+                    const randomIndex10 = Math.floor(Math.random() * r8revolverImgs.length);
 
                     return (
                         <>
@@ -97,7 +113,16 @@ const Pistols = () => {
                                 <Link to="CZ75Auto"><img src={cz75autoImgs[randomIndex6]} alt="CZ75Auto" /><p>CZ75-Auto</p></Link> { } 
                             </div>
                             <div className="ItemDaGaleria">
-                                <Link to="Tec9"><img src={tec9Imgs[randomIndex6]} alt="Tec9" /><p>Tec-9</p></Link> { } 
+                                <Link to="Tec9"><img src={tec9Imgs[randomIndex7]} alt="Tec9" /><p>Tec-9</p></Link> { } 
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="FiveSeveN"><img src={fivesevenImgs[randomIndex8]} alt="FiveSeveN" /><p>Five-SeveN</p></Link> { } 
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="DesertEagle"><img src={deserteagleImgs[randomIndex9]} alt="DesertEagle" /><p>Desert Eagle</p></Link> { } 
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="R8Revolver"><img src={r8revolverImgs[randomIndex10]} alt="R8Revolver" /><p>R8 Revolver</p></Link> { } 
                             </div>
                         </>
                     );

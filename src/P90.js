@@ -2,23 +2,23 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 const API_URL = "https://bymykel.github.io/CSGO-API/api/en/skins.json";
 
-const Tec9 = () => {
-    const [Tec9, setTec9] = useState([])
+const P90 = () => {
+    const [P90, setP90] = useState([])
     const [Loading, setLoading] = useState(true)
     useEffect(() => {
-        const fetchTec9 = async () => {
+        const fetchP90 = async () => {
             try {
                 const resposta = await axios.get(API_URL);
                 const data = resposta.data;
-                const Tec9Skins = data.filter((skin) => skin.weapon.name === "Tec-9");
-                setTec9(Tec9Skins);
+                const P90Skins = data.filter((skin) => skin.weapon.name === "P90");
+                setP90(P90Skins);
                 setLoading(false);
             } catch (error) {
                 console.error("Erro a carregar a skin", error);
                 setLoading(false);
             }
         };
-        fetchTec9();
+        fetchP90();
     }, []
     );
     if (Loading) {
@@ -28,11 +28,11 @@ const Tec9 = () => {
     }
     return(
             <div class="Galeria">
-                {Tec9.map((Tec9)=>(
+                {P90.map((P90)=>(
                     <>
-                        <div className="ItemDaGaleria" style={{ background: `${Tec9.rarity.color}60` }}>
-                            <img src={Tec9.image}></img>
-                            <p>{Tec9.name}</p>
+                        <div className="ItemDaGaleria" style={{ background: `${P90.rarity.color}60` }}>
+                            <img src={P90.image}></img>
+                            <p>{P90.name}</p>
                         </div>
                     </>
                     ))
@@ -40,4 +40,4 @@ const Tec9 = () => {
             </div>
     )
 }
-export default Tec9;
+export default P90;

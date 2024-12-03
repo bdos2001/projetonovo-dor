@@ -2,23 +2,23 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 const API_URL = "https://bymykel.github.io/CSGO-API/api/en/skins.json";
 
-const Tec9 = () => {
-    const [Tec9, setTec9] = useState([])
+const FiveSeveN = () => {
+    const [FiveSeveN, setFiveSeveN] = useState([])
     const [Loading, setLoading] = useState(true)
     useEffect(() => {
-        const fetchTec9 = async () => {
+        const fetchFiveSeveN = async () => {
             try {
                 const resposta = await axios.get(API_URL);
                 const data = resposta.data;
-                const Tec9Skins = data.filter((skin) => skin.weapon.name === "Tec-9");
-                setTec9(Tec9Skins);
+                const FiveSeveNSkins = data.filter((skin) => skin.weapon.name === "Five-SeveN");
+                setFiveSeveN(FiveSeveNSkins);
                 setLoading(false);
             } catch (error) {
                 console.error("Erro a carregar a skin", error);
                 setLoading(false);
             }
         };
-        fetchTec9();
+        fetchFiveSeveN();
     }, []
     );
     if (Loading) {
@@ -28,11 +28,11 @@ const Tec9 = () => {
     }
     return(
             <div class="Galeria">
-                {Tec9.map((Tec9)=>(
+                {FiveSeveN.map((FiveSeveN)=>(
                     <>
-                        <div className="ItemDaGaleria" style={{ background: `${Tec9.rarity.color}60` }}>
-                            <img src={Tec9.image}></img>
-                            <p>{Tec9.name}</p>
+                        <div className="ItemDaGaleria" style={{ background: `${FiveSeveN.rarity.color}60` }}>
+                            <img src={FiveSeveN.image}></img>
+                            <p>{FiveSeveN.name}</p>
                         </div>
                     </>
                     ))
@@ -40,4 +40,4 @@ const Tec9 = () => {
             </div>
     )
 }
-export default Tec9;
+export default FiveSeveN;
