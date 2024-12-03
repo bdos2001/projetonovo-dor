@@ -40,6 +40,7 @@ const Pistols = () => {
                 {(() => {
                     const glockImgs = [];
                     const uspsImgs = [];
+                    const p250Imgs = [];
                     Pistols.forEach((pistols) => {
                         if (pistols.weapon.name === "Glock-18") {
                             glockImgs.push(pistols.image);
@@ -47,9 +48,13 @@ const Pistols = () => {
                         if (pistols.weapon.name === "USP-S") {
                             uspsImgs.push(pistols.image);
                         }
+                        if (pistols.weapon.name === "P250") {
+                            p250Imgs.push(pistols.image);
+                        }
                     });
                     const randomIndex1 = Math.floor(Math.random() * glockImgs.length);
                     const randomIndex2 = Math.floor(Math.random() * uspsImgs.length);
+                    const randomIndex4 = Math.floor(Math.random() * p250Imgs.length);
 
                     return (
                         <>
@@ -57,7 +62,10 @@ const Pistols = () => {
                                 <Link to="Glock18"><img src={glockImgs[randomIndex1]} alt="Glock-18" /><p>Glock-18</p></Link> { }
                             </div>
                             <div className="ItemDaGaleria">
-                            <Link to="USPs"><img src={uspsImgs[randomIndex2]} alt="USP-S" /><p>USP-S</p></Link> { }
+                                <Link to="USPs"><img src={uspsImgs[randomIndex2]} alt="USP-S" /><p>USP-S</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="P250"><img src={p250Imgs[randomIndex2]} alt="P250" /><p>P250</p></Link> { }
                             </div>
                         </>
                     );
