@@ -1,4 +1,4 @@
 function SMGs() {
-    return ("SMGs")
+    return ("SMGs gui")
 }
 export default SMGs;
