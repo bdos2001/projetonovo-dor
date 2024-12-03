@@ -12,6 +12,7 @@ import Gloves from './Gloves';
 import Home from './Home';
 import Glock18 from './Glock18';
 import USPs from './USPs';
+import P2000 from './P2000';
 import MyLoadout from './MyLoadout';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -35,6 +36,7 @@ root.render(
           <Route path="Gloves" element={<Gloves />} />
           <Route path="Pistols/Glock18" element={<Glock18 />} />
           <Route path="Pistols/USPs" element={<USPs />} />
+          <Route path="Pistols/P2000" element={<P2000 />} />
         </Route>
       </Routes>
     </BrowserRouter>
