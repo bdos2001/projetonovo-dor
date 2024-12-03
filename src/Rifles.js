@@ -1,4 +1,4 @@
 function Rifles() {
-    return ("Rifles ahahaha")
+    return ("Rifles")
 }
 export default Rifles;
