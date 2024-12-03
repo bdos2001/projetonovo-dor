@@ -6,24 +6,24 @@ const API_URL = "https://bymykel.github.io/CSGO-API/api/en/skins.json";
 
 
 
-const Gloves = () => {
-    const [Gloves, setGloves] = useState([])
+const Heavy = () => {
+    const [Heavy, setHeavy] = useState([])
     const [Loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const fetchGloves = async () => {
+        const fetchHeavy = async () => {
             try {
                 const resposta = await axios.get(API_URL);
                 const data = resposta.data;
-                const GlovesSkins = data.filter((skin) => skin.category.name === "Gloves");
-                setGloves(GlovesSkins);
+                const HeavySkins = data.filter((skin) => skin.category.name === "Heavy");
+                setHeavy(HeavySkins);
                 setLoading(false);
             } catch (error) {
                 console.error("Erro a carregar a skin", error);
                 setLoading(false);
             }
         };
-        fetchGloves();
+        fetchHeavy();
     }, []
     );
     if (Loading) {
@@ -34,22 +34,22 @@ const Gloves = () => {
 
     return (
         <>
-            <h1>Gloves</h1>
+            <h1>Heavy</h1>
             <div className="Galeria">
 
                 {(() => {
-                    const BFGlovesImgs = [];
-                    Gloves.forEach((Gloves) => {
-                        if (Gloves.weapon.name === "Broken Fang Gloves") {
-                            BFGlovesImgs.push(Gloves.image);
+                    const NegevImgs = [];
+                    Heavy.forEach((Heavy) => {
+                        if (Heavy.weapon.name === "Negev") {
+                            NegevImgs.push(Heavy.image);
                         }
                     });
-                    const randomIndex1 = Math.floor(Math.random() * BFGlovesImgs.length);
+                    const randomIndex1 = Math.floor(Math.random() * NegevImgs.length);
 
                     return (
                         <>
                             <div className="ItemDaGaleria">
-                                <Link to="BFGloves"><img src={BFGlovesImgs[randomIndex1]} alt="BFGloves" /><p>Broken Fang Gloves</p></Link> { }
+                                <Link to="Negev"><img src={NegevImgs[randomIndex1]} alt="Negev" /><p>Negev</p></Link> { }
                             </div>
                         </>
                     );
@@ -61,4 +61,4 @@ const Gloves = () => {
 
     );
 }
-export default Gloves;
+export default Heavy;
