@@ -71,8 +71,3 @@ code {
     monospace;
 }
 
-.container{
-  display: flex;
-  text-align: center;
-  width: 100%;
-}

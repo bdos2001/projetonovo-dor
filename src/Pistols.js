@@ -70,8 +70,10 @@ const Pistols = () => {
                                 <Link to="USPs"><img src={uspsImgs[randomIndex2]} alt="USP-S" /><p>USP-S</p></Link> { }
                             </div>
                             <div className="ItemDaGaleria">
-                                <Link to="P250"><img src={p250Imgs[randomIndex2]} alt="P250" /><p>P250</p></Link> { }
                                 <Link to="P2000"><img src={p2000Imgs[randomIndex2]} alt="P2000" /><p>P2000</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="P250"><img src={p250Imgs[randomIndex2]} alt="P250" /><p>P250</p></Link> { }
                             </div>
                         </>
                     );
