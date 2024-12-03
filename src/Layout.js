@@ -8,8 +8,7 @@ function Layout(props) {
                 <Link to="Home">Home </Link>{ }
                 <Link to="Pistols">Pistols </Link>{ }
                 <Link to="SMGs">SMGs </Link>{ }
-                <Link to="Shotguns">Shotguns </Link>{ }
-                <Link to="MachineGuns">MachineGuns </Link>{ }
+                <Link to="Heavy">Heavy </Link>{ }
                 <Link to="Rifles">Rifles </Link>{ }
                 <Link to="Knives">Knives </Link>{ }
                 <Link to="Gloves">Gloves</Link>{ }
