@@ -14,6 +14,10 @@ import Glock18 from './Glock18';
 import USPs from './USPs';
 import P250 from './P250';
 import P2000 from './P2000';
+import DualBerettas from './DualBerettas';
+import CZ75Auto from './CZ75Auto';
+import Tec9 from './Tec9';
+import FiveSeven from './FiveSeven';
 import MyLoadout from './MyLoadout';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -39,6 +43,9 @@ root.render(
           <Route path="Pistols/USPs" element={<USPs />} />
           <Route path="Pistols/P250" element={<P250 />} />
           <Route path="Pistols/P2000" element={<P2000 />} />
+          <Route path="Pistols/DualBerettas" element={<DualBerettas />} />
+          <Route path="Pistols/CZ75Auto" element={<CZ75Auto />} />
+          <Route path="Pistols/Tec9" element={<Tec9 />} />
         </Route>
       </Routes>
     </BrowserRouter>

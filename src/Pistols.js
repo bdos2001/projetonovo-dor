@@ -42,6 +42,9 @@ const Pistols = () => {
                     const uspsImgs = [];
                     const p250Imgs = [];
                     const p2000Imgs = [];
+                    const dualberettasImgs = [];
+                    const cz75autoImgs = [];
+                    const tec9Imgs = [];
                     Pistols.forEach((pistols) => {
                         if (pistols.weapon.name === "Glock-18") {
                             glockImgs.push(pistols.image);
@@ -55,11 +58,23 @@ const Pistols = () => {
                         if (pistols.weapon.name === "P2000") {
                             p2000Imgs.push(pistols.image);
                         }
+                        if (pistols.weapon.name === "Dual Berettas") {
+                            dualberettasImgs.push(pistols.image);
+                        }
+                        if (pistols.weapon.name === "CZ75-Auto") {
+                            cz75autoImgs.push(pistols.image);
+                        }
+                        if (pistols.weapon.name === "Tec-9") {
+                            tec9Imgs.push(pistols.image);
+                        }
                     });
                     const randomIndex1 = Math.floor(Math.random() * glockImgs.length);
                     const randomIndex2 = Math.floor(Math.random() * uspsImgs.length);
                     const randomIndex3 = Math.floor(Math.random() * p2000Imgs.length);
                     const randomIndex4 = Math.floor(Math.random() * p250Imgs.length);
+                    const randomIndex5 = Math.floor(Math.random() * dualberettasImgs.length);
+                    const randomIndex6 = Math.floor(Math.random() * cz75autoImgs.length);
+                    const randomIndex7 = Math.floor(Math.random() * tec9Imgs.length);
 
                     return (
                         <>
@@ -74,6 +89,15 @@ const Pistols = () => {
                             </div>
                             <div className="ItemDaGaleria">
                                 <Link to="P250"><img src={p250Imgs[randomIndex4]} alt="P250" /><p>P250</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="DualBerettas"><img src={dualberettasImgs[randomIndex5]} alt="DualBerettas" /><p>Dual Berettas</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="CZ75Auto"><img src={cz75autoImgs[randomIndex6]} alt="CZ75Auto" /><p>CZ75-Auto</p></Link> { } 
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="Tec9"><img src={tec9Imgs[randomIndex6]} alt="Tec9" /><p>Tec-9</p></Link> { } 
                             </div>
                         </>
                     );
