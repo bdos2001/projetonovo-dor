@@ -3,3 +3,4 @@ https://www.color-hex.com/color-palette/1294
 https://bymykel.github.io/CSGO-API/api/en/skins.json
 
 nsey boy
+bruno
