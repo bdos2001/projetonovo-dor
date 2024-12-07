@@ -38,18 +38,75 @@ const Gloves = () => {
             <div className="Galeria">
 
                 {(() => {
-                    const BFGlovesImgs = [];
+                    const BrokenFangGlovesImgs = [];
+                    const DriverGlovesImgs = [];
+                    const HandWrapsImgs = [];
+                    const MotoGlovesImgs = [];
+                    const SpecialistGlovesImgs = [];
+                    const SportGlovesImgs = [];
+                    const HydraGlovesImgs = [];
+                    const BloodhoundGlovesImgs = [];
+
                     Gloves.forEach((Gloves) => {
                         if (Gloves.weapon.name === "Broken Fang Gloves") {
-                            BFGlovesImgs.push(Gloves.image);
+                            BrokenFangGlovesImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Driver Gloves") {
+                            DriverGlovesImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Hand Wraps") {
+                            HandWrapsImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Moto Gloves") {
+                            MotoGlovesImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Specialist Gloves") {
+                            SpecialistGlovesImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Sport Gloves") {
+                            SportGlovesImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Hydra Gloves") {
+                            HydraGlovesImgs.push(Gloves.image);
+                        }
+                        if (Gloves.weapon.name === "Bloodhound Gloves") {
+                            BloodhoundGlovesImgs.push(Gloves.image);
                         }
                     });
-                    const randomIndex1 = Math.floor(Math.random() * BFGlovesImgs.length);
+                    const randomIndex1 = Math.floor(Math.random() * BrokenFangGlovesImgs.length);
+                    const randomIndex2 = Math.floor(Math.random() * DriverGlovesImgs.length);
+                    const randomIndex3 = Math.floor(Math.random() * HandWrapsImgs.length);
+                    const randomIndex4 = Math.floor(Math.random() * MotoGlovesImgs.length);
+                    const randomIndex5 = Math.floor(Math.random() * SpecialistGlovesImgs.length);
+                    const randomIndex6 = Math.floor(Math.random() * SportGlovesImgs.length);
+                    const randomIndex7 = Math.floor(Math.random() * HydraGlovesImgs.length);
+                    const randomIndex8 = Math.floor(Math.random() * BloodhoundGlovesImgs.length);
 
                     return (
                         <>
                             <div className="ItemDaGaleria">
-                                <Link to="BFGloves"><img src={BFGlovesImgs[randomIndex1]} alt="BFGloves" /><p>Broken Fang Gloves</p></Link> { }
+                                <Link to="BrokenFangGloves"><img src={BrokenFangGlovesImgs[randomIndex1]} alt="BrokenFangGloves" /><p>Broken Fang Gloves</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="DriverGloves"><img src={DriverGlovesImgs[randomIndex2]} alt="DriverGloves" /><p>Driver Gloves</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="HandWraps"><img src={HandWrapsImgs[randomIndex3]} alt="HandWraps" /><p>Hand Wraps</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="MotoGloves"><img src={MotoGlovesImgs[randomIndex4]} alt="MotoGloves" /><p>Moto Gloves</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="SpecialistGloves"><img src={SpecialistGlovesImgs[randomIndex5]} alt="SpecialistGloves" /><p>Specialist Gloves</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="SportGloves"><img src={SportGlovesImgs[randomIndex6]} alt="SportGloves" /><p>Sport Gloves</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="HydraGloves"><img src={HydraGlovesImgs[randomIndex7]} alt="HydraGloves" /><p>Hydra Gloves</p></Link> { }
+                            </div>
+                            <div className="ItemDaGaleria">
+                                <Link to="BloodhoundGloves"><img src={BloodhoundGlovesImgs[randomIndex8]} alt="BloodhoundGloves" /><p>Bloodhound Gloves</p></Link> { }
                             </div>
                         </>
                     );
