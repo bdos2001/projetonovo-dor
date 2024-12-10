@@ -1,4 +1,4 @@
-.Galeria{
+.Galeria {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   height: fit-content;
 }
 
-.ItemDaGaleria{
+.ItemDaGaleria {
   width: 30vw;
   margin-bottom: 1em;
 }
@@ -15,31 +15,34 @@ body {
   margin: 0;
   height: 100vh;
   font-size: 2em;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background: rgb(0,91,150);
-  background: linear-gradient(0deg, #03396c 0%, rgba(1,31,75,1) 75%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: rgb(0, 91, 150);
+  background: linear-gradient(0deg, #03396c 0%, rgba(1, 31, 75, 1) 75%);
   background-attachment: fixed;
-  color:#6497b1;
+  color: #6497b1;
+  transition: background-color 0.3s ease;
 }
 
-#topo{
+#topo {
   font-family: Impact, fantasy;
   padding: 3.5vh;
   letter-spacing: 2vh;
   word-spacing: 2vh;
   font-size: 3em;
-  background-color: 	#b3cde0;
+  background-color: #b3cde0;
 }
 
-#topo a:link, #topo a:visited{
+#topo a:link,
+#topo a:visited {
   color: #011f4b;
 }
 
-#topo a:hover, #topo a:active{
+#topo a:hover,
+#topo a:active {
   color: #005b96;
 }
 
-#menu{
+#menu {
   padding: 1.5vh;
   font-family: Impact, fantasy;
   background-color: #011f4b;
@@ -51,18 +54,20 @@ nav {
 }
 
 /* unvisited link */
-a:link,a:visited {
+a:link,
+a:visited {
   color: #6497b1;
   text-decoration: none;
 }
 
 /* mouse over link */
-a:hover,a:active {
+a:hover,
+a:active {
   color: #005b96;
   text-decoration: none;
 }
 
-div{
+div {
   text-align: center;
 }
 
@@ -84,7 +89,7 @@ img {
   font-size: 6rem;
   display: flex;
   margin-left: 20px;
-  align-items: left; 
+  align-items: left;
 }
 
 .toggle {
@@ -103,25 +108,26 @@ img {
   width: 50px;
   height: 50px;
   background-color: hsl(0, 0%, 95%);
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsZLQ6Ly1izxTn6lb0n7nyJfFv0z7rDFPAkw&s');
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
   margin-top: calc(155px - (.25rem * 2) - 50px);
   transition: margin 500ms ease-in-out;
 }
 
-.toggle-text {
-  display: flex;
-  flex-direction: column;
-  line-height: .8;
-}
-
-#check:checked + .toggle > .toggle__circle {
+#check:checked+.toggle>.toggle__circle {
   margin-top: 0;
+  background-image: url('https://ih1.redbubble.net/image.1944330613.5064/raf,360x360,075,t,fafafa:ca443f4786.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#check:checked + .toggle {
+#check:checked+.toggle {
   background-color: #998D5D;
 }
 
 #check {
-  display: none; /* ou visibility: hidden; ou opacity: 0; */
+  display: none;
 }
+
