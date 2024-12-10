@@ -9,6 +9,11 @@ const MyLoadout = () => {
     const [ImagemUSPs, setImagemUSPs] = useState('');
     const [Glock, setGlock] = useState([]);
     const [USPs, setUSPs] = useState([]);
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleToggleChange = () => {
+        setIsChecked(!isChecked);
+    };
 
     useEffect(() => {
         const fetchMyLoadout = async () => {
@@ -45,47 +50,51 @@ const MyLoadout = () => {
         <>
             <body className="corpo">
                 <div className="containerToggle">
-                    <input id="check" name="check" type="checkbox" />
+                    <input id="check" name="check" type="checkbox" checked={isChecked} onChange={handleToggleChange} />
                     <label className="toggle" htmlFor="check">
                         <div className="toggle__circle"></div>
                     </label>
                 </div>
 
                 <div className="Galeria">
-                    <div className="ItemDaGaleria">
-                        <img src={ImagemGlock} alt="Selected Glock" />
-                        <select
-                            onChange={(e) => {
-                                const selectedGlock = Glock.find(glock => glock.name === e.target.value);
-                                if (selectedGlock) {
-                                    setImagemGlock(selectedGlock.image);
-                                }
-                            }}
-                        >
-                            {Glock.map((glock18) => (
-                                <option key={glock18.name} value={glock18.name}>
-                                    {glock18.name}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className="ItemDaGaleria" >
-                        <img src={ImagemUSPs} alt="Selected USP-S" />
-                        <select
-                            onChange={(e) => {
-                                const selectedUSPs = USPs.find(usps => usps.name === e.target.value);
-                                if (selectedUSPs) {
-                                    setImagemUSPs(selectedUSPs.image);
-                                }
-                            }}
-                        >
-                            {USPs.map((usps) => (
-                                <option key={usps.name} value={usps.name}>
-                                    {usps.name}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
+                    {isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemGlock} alt="Selected Glock" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedGlock = Glock.find(glock => glock.name === e.target.value);
+                                    if (selectedGlock) {
+                                        setImagemGlock(selectedGlock.image);
+                                    }
+                                }}
+                            >
+                                {Glock.map((glock18) => (
+                                    <option key={glock18.name} value={glock18.name}>
+                                        {glock18.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    {!isChecked && (
+                        <div className="ItemDaGaleria" >
+                            <img src={ImagemUSPs} alt="Selected USP-S" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedUSPs = USPs.find(usps => usps.name === e.target.value);
+                                    if (selectedUSPs) {
+                                        setImagemUSPs(selectedUSPs.image);
+                                    }
+                                }}
+                            >
+                                {USPs.map((usps) => (
+                                    <option key={usps.name} value={usps.name}>
+                                        {usps.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
                 </div>
             </body>
         </>
