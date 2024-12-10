@@ -1,8 +1,8 @@
 function Home() {
     return (
         <>
-            <h1 style={{ textDecoration: "underline" }}>Welcome to your CS2 Inventory Manager!</h1>
-            <p>Organize and personalize your inventory in a practical way. Explore all categories, from pistols to gloves, and configure your ideal loadout.</p>
+            <h1 style={{ textDecoration: "underline" }}>Bem-vindo ao teu gestor de inventário do CS2!</h1>
+            <p>Organiza e personaliza o teu inventário de forma prática. Explora todas as categorias, de pistolas até luvas, e configura o teu loadout ideal.</p>
         </>
     )
 }
