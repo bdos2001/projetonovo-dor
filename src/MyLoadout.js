@@ -45,6 +45,18 @@ const MyLoadout = () => {
     return (
         <>
             <h1>My Loadout</h1>
+            <div className="containerToggle">
+                <input id="check" name="check" type="checkbox" />
+                <label className="toggle" htmlFor="check">
+                    <div className="toggle__circle"></div>
+                </label>
+
+                <div className="toggle-text">
+                    <span>T</span>
+                    <span>CT</span>
+                </div>
+            </div>
+
             <div className="Galeria">
                 <div className="ItemDaGaleria">
                     <img src={ImagemGlock} alt="Selected Glock" />
