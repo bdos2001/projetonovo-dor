@@ -31,7 +31,6 @@ const Pistols = () => {
             <div>A carregar...</div>
         )
     }
-
     return (
         <>
             <h1>Pistols</h1>
