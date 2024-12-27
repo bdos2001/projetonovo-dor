@@ -11,7 +11,8 @@ function Layout(props) {
                 <Link to="Heavy">Heavy </Link>{ }
                 <Link to="Rifles">Rifles </Link>{ }
                 <Link to="Knives">Knives </Link>{ }
-                <Link to="Gloves">Gloves</Link>{ }
+                <Link to="Gloves">Gloves </Link>{ }
+                <Link to="Contact">Contact </Link>{ }
             </nav>
             <Outlet/>
             

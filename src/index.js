@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Layout from './Layout';
+import Contact from './Contact';
 import Pistols from './Pistols';
 import SMGs from './SMGs';
 import Heavy from './Heavy';
@@ -84,6 +85,7 @@ root.render(
         <Route path="/" element={<Layout />} >
           <Route path="Home" element={<Home />} />
           <Route path="" element={<Home />} />
+          <Route path="Contact" element={<Contact />} />
           <Route path="MyLoadout" element={<MyLoadout />} />
           <Route path="Pistols" element={<Pistols />} />
           <Route path="SMGs" element={<SMGs />} />
