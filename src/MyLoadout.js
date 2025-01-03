@@ -741,7 +741,6 @@ const MyLoadout = () => {
                             </select>
                         </div>
                     )}
-                </div>
                     {isChecked && (
                         <div className="ItemDaGaleria">
                             <img src={ImagemSG553} alt="Selected SG 553" />
@@ -816,6 +815,7 @@ const MyLoadout = () => {
                             </select>
                         </div>
                     )}
+                </div> 
             </body>
         </>
 
