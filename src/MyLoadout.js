@@ -20,6 +20,24 @@ const MyLoadout = () => {
     const [ImagemMP7, setImagemMP7] = useState('');
     const [ImagemPPBizon, setImagemPPBizon] = useState('');
     const [ImagemP90, setImagemP90] = useState('');
+    const [ImagemUMP, setImagemUMP] = useState('');
+    const [ImagemNegev, setImagemNegev] = useState('');
+    const [ImagemM249, setImagemM249] = useState('');
+    const [ImagemMAG7, setImagemMAG7] = useState('');
+    const [ImagemNova, setImagemNova] = useState('');
+    const [ImagemSawedOff, setImagemSawedOff] = useState('');
+    const [ImagemXM1014, setImagemXM1014] = useState('');
+    const [ImagemAK47, setImagemAK47] = useState('');
+    const [ImagemM4A4, setImagemM4A4] = useState('');
+    const [ImagemGalilAR, setImagemGalilAR] = useState('');
+    const [ImagemM4A1S, setImagemM4A1S] = useState('');
+    const [ImagemFAMAS, setImagemFAMAS] = useState('');
+    const [ImagemAWP, setImagemAWP] = useState('');
+    const [ImagemAUG, setImagemAUG] = useState('');
+    const [ImagemSG553, setImagemSG553] = useState('');
+    const [ImagemSSG08, setImagemSSG08] = useState('');
+    const [ImagemSCAR20, setImagemSCAR20] = useState('');
+    const [ImagemG3SG1, setImagemG3SG1] = useState('');
     const [Glock, setGlock] = useState([]);
     const [USPs, setUSPs] = useState([]);
     const [P2000, setP2000] = useState([]);
@@ -35,6 +53,24 @@ const MyLoadout = () => {
     const [MP7, setMP7] = useState([]);
     const [PPBizon, setPPBizon] = useState([]);
     const [P90, setP90] = useState([]);
+    const [UMP, setUMP] = useState([]);
+    const [Negev, setNegev] = useState([]);
+    const [M249, setM249] = useState([]);
+    const [MAG7, setMAG7] = useState([]);
+    const [Nova, setNova] = useState([]);
+    const [SawedOff, setSawedOff] = useState([]);
+    const [XM1014, setXM1014] = useState([]);
+    const [AK47, setAK47] = useState([]);
+    const [M4A4, setM4A4] = useState([]);
+    const [GalilAR, setGalilAR] = useState([]);
+    const [M4A1S, setM4A1S] = useState([]);
+    const [FAMAS, setFAMAS] = useState([]);
+    const [AWP, setAWP] = useState([]);
+    const [AUG, setAUG] = useState([]);
+    const [SG553, setSG553] = useState([]);
+    const [SSG08, setSSG08] = useState([]);
+    const [SCAR20, setSCAR20] = useState([]);
+    const [G3SG1, setG3SG1] = useState([]);
     const [isChecked, setIsChecked] = useState(false);
 
     const handleToggleChange = () => {
@@ -78,6 +114,42 @@ const MyLoadout = () => {
                 setPPBizon(PPBizon);
                 const P90 = data.filter((skin) => skin.weapon.name === "P90");
                 setP90(P90);
+                const UMP = data.filter((skin) => skin.weapon.name === "UMP-45");
+                setUMP(UMP);
+                const Negev = data.filter((skin) => skin.weapon.name === "Negev");
+                setNegev(Negev);
+                const M249 = data.filter((skin) => skin.weapon.name === "M249");
+                setM249(M249);
+                const MAG7 = data.filter((skin) => skin.weapon.name === "MAG-7");
+                setMAG7(MAG7);
+                const Nova = data.filter((skin) => skin.weapon.name === "Nova");
+                setNova(Nova);
+                const SawedOff = data.filter((skin) => skin.weapon.name === "Sawed-Off");
+                setSawedOff(SawedOff);
+                const XM1014 = data.filter((skin) => skin.weapon.name === "XM1014");
+                setXM1014(XM1014);
+                const AK47 = data.filter((skin) => skin.weapon.name === "AK-47");
+                setAK47(AK47);
+                const M4A4 = data.filter((skin) => skin.weapon.name === "M4A4");
+                setM4A4(M4A4);
+                const GalilAR = data.filter((skin) => skin.weapon.name === "Galil AR");
+                setGalilAR(GalilAR);
+                const M4A1S = data.filter((skin) => skin.weapon.name === "M4A1-S");
+                setM4A1S(M4A1S);
+                const FAMAS = data.filter((skin) => skin.weapon.name === "FAMAS");
+                setFAMAS(FAMAS);
+                const AWP = data.filter((skin) => skin.weapon.name === "AWP");
+                setAWP(AWP);
+                const AUG = data.filter((skin) => skin.weapon.name === "AUG");
+                setAUG(AUG);
+                const SG553 = data.filter((skin) => skin.weapon.name === "SG 553");
+                setSG553(SG553);
+                const SSG08 = data.filter((skin) => skin.weapon.name === "SSG 08");
+                setSSG08(SSG08);
+                const SCAR20 = data.filter((skin) => skin.weapon.name === "SCAR-20");
+                setSCAR20(SCAR20);
+                const G3SG1 = data.filter((skin) => skin.weapon.name === "G3SG1");
+                setG3SG1(G3SG1);
 
                 // Define a Imagem
                 setImagemGlock(Glock18[0].image);
@@ -95,6 +167,24 @@ const MyLoadout = () => {
                 setImagemMP7(MP7[0].image);
                 setImagemPPBizon(PPBizon[0].image);
                 setImagemP90(P90[0].image);
+                setImagemUMP(UMP[0].image);
+                setImagemNegev(Negev[0].image);
+                setImagemM249(M249[0].image);
+                setImagemMAG7(MAG7[0].image);
+                setImagemNova(Nova[0].image);
+                setImagemSawedOff(SawedOff[0].image);
+                setImagemXM1014(XM1014[0].image);
+                setImagemAK47(AK47[0].image);
+                setImagemM4A4(M4A4[0].image);
+                setImagemGalilAR(GalilAR[0].image);
+                setImagemM4A1S(M4A1S[0].image);
+                setImagemFAMAS(FAMAS[0].image);
+                setImagemAWP(AWP[0].image);
+                setImagemAUG(AUG[0].image);
+                setImagemSG553(SG553[0].image);
+                setImagemSSG08(SSG08[0].image);
+                setImagemSCAR20(SCAR20[0].image);
+                setImagemG3SG1(G3SG1[0].image);
 
                 setLoading(false);
             } catch (error) {
@@ -395,7 +485,337 @@ const MyLoadout = () => {
                                 ))}
                             </select>
                         </div>
+                        <div className="ItemDaGaleria" >
+                            <img src={ImagemUMP} alt="Selected UMP" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedUMP = UMP.find(ump => ump.name === e.target.value);
+                                    if (selectedUMP) {
+                                        setImagemUMP(selectedUMP.image);
+                                    }
+                                }}
+                            >
+                                {UMP.map((ump) => (
+                                    <option key={ump.name} value={ump.name}>
+                                        {ump.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
                 </div>
+                <h4>Heavy</h4>
+                <div className="Galeria">
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemNegev} alt="Selected Negev" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedNegev = Negev.find(negev => negev.name === e.target.value);
+                                    if (selectedNegev) {
+                                        setImagemNegev(selectedNegev.image);
+                                    }
+                                }}
+                            >
+                                {Negev.map((negev) => (
+                                    <option key={negev.name} value={negev.name}>
+                                        {negev.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemM249} alt="Selected M249" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedM249 = M249.find(m249 => m249.name === e.target.value);
+                                    if (selectedM249) {
+                                        setImagemM249(selectedM249.image);
+                                    }
+                                }}
+                            >
+                                {M249.map((m249) => (
+                                    <option key={m249.name} value={m249.name}>
+                                        {m249.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemMAG7} alt="Selected MAG-7" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedMAG7 = MAG7.find(mag7 => mag7.name === e.target.value);
+                                    if (selectedMAG7) {
+                                        setImagemMAG7(selectedMAG7.image);
+                                    }
+                                }}
+                            >
+                                {MAG7.map((mag7) => (
+                                    <option key={mag7.name} value={mag7.name}>
+                                        {mag7.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemNova} alt="Selected Nova" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedNova = Nova.find(nova => nova.name === e.target.value);
+                                    if (selectedNova) {
+                                        setImagemNova(selectedNova.image);
+                                    }
+                                }}
+                            >
+                                {Nova.map((nova) => (
+                                    <option key={nova.name} value={nova.name}>
+                                        {nova.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemSawedOff} alt="Selected Sawed-Off" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedSawedOff = SawedOff.find(sawedoff => sawedoff.name === e.target.value);
+                                    if (selectedSawedOff) {
+                                        setImagemSawedOff(selectedSawedOff.image);
+                                    }
+                                }}
+                            >
+                                {SawedOff.map((sawedoff) => (
+                                    <option key={sawedoff.name} value={sawedoff.name}>
+                                        {sawedoff.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemXM1014} alt="Selected XM1014" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedXM1014 = XM1014.find(xm1014 => xm1014.name === e.target.value);
+                                    if (selectedXM1014) {
+                                        setImagemXM1014(selectedXM1014.image);
+                                    }
+                                }}
+                            >
+                                {XM1014.map((xm1014) => (
+                                    <option key={xm1014.name} value={xm1014.name}>
+                                        {xm1014.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                </div>
+                <h4>Rifles</h4>
+                <div className="Galeria">
+                {isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemAK47} alt="Selected AK-47" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedAK47 = AK47.find(ak47 => ak47.name === e.target.value);
+                                    if (selectedAK47) {
+                                        setImagemAK47(selectedAK47.image);
+                                    }
+                                }}
+                            >
+                                {AK47.map((ak47) => (
+                                    <option key={ak47.name} value={ak47.name}>
+                                        {ak47.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    {!isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemM4A4} alt="Selected M4A4" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedM4A4 = M4A4.find(m4a4 => m4a4.name === e.target.value);
+                                    if (selectedM4A4) {
+                                        setImagemM4A4(selectedM4A4.image);
+                                    }
+                                }}
+                            >
+                                {M4A4.map((m4a4) => (
+                                    <option key={m4a4.name} value={m4a4.name}>
+                                        {m4a4.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    {isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemGalilAR} alt="Selected Galil AR" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedGalilAR = GalilAR.find(galilar => galilar.name === e.target.value);
+                                    if (selectedGalilAR) {
+                                        setImagemGalilAR(selectedGalilAR.image);
+                                    }
+                                }}
+                            >
+                                {GalilAR.map((galilar) => (
+                                    <option key={galilar.name} value={galilar.name}>
+                                        {galilar.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    {!isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemM4A1S} alt="Selected M4A1-S" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedM4A1S = M4A1S.find(ma4a1s => ma4a1s.name === e.target.value);
+                                    if (selectedM4A1S) {
+                                        setImagemM4A1S(selectedM4A1S.image);
+                                    }
+                                }}
+                            >
+                                {M4A1S.map((ma4a1s) => (
+                                    <option key={ma4a1s.name} value={ma4a1s.name}>
+                                        {ma4a1s.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    {!isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemFAMAS} alt="Selected FAMAS" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedFAMAS = FAMAS.find(famas => famas.name === e.target.value);
+                                    if (selectedFAMAS) {
+                                        setImagemFAMAS(selectedFAMAS.image);
+                                    }
+                                }}
+                            >
+                                {FAMAS.map((famas) => (
+                                    <option key={famas.name} value={famas.name}>
+                                        {famas.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    <div className="ItemDaGaleria" >
+                        <img src={ImagemAWP} alt="Selected AWP" />
+                        <select
+                            onChange={(e) => {
+                                const selectedAWP = AWP.find(awp => awp.name === e.target.value);
+                                if (selectedAWP) {
+                                    setImagemAWP(selectedAWP.image);
+                                }
+                            }}
+                        >
+                            {AWP.map((awp) => (
+                                <option key={awp.name} value={awp.name}>
+                                    {awp.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    {!isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemAUG} alt="Selected AUG" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedAUG = AUG.find(aug => aug.name === e.target.value);
+                                    if (selectedAUG) {
+                                        setImagemAUG(selectedAUG.image);
+                                    }
+                                }}
+                            >
+                                {AUG.map((aug) => (
+                                    <option key={aug.name} value={aug.name}>
+                                        {aug.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                </div>
+                    {isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemSG553} alt="Selected SG 553" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedSG553 = SG553.find(sg553 => sg553.name === e.target.value);
+                                    if (selectedSG553) {
+                                        setImagemSG553(selectedSG553.image);
+                                    }
+                                }}
+                            >
+                                {SG553.map((sg553) => (
+                                    <option key={sg553.name} value={sg553.name}>
+                                        {sg553.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    <div className="ItemDaGaleria" >
+                        <img src={ImagemSSG08} alt="Selected SSG 08" />
+                        <select
+                            onChange={(e) => {
+                                const selectedSSG08 = SSG08.find(ssg08 => ssg08.name === e.target.value);
+                                if (selectedSSG08) {
+                                    setImagemSSG08(selectedSSG08.image);
+                                }
+                            }}
+                        >
+                            {SSG08.map((ssg08) => (
+                                <option key={ssg08.name} value={ssg08.name}>
+                                    {ssg08.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    {!isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemSCAR20} alt="Selected SCAR-20" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedSCAR20 = SCAR20.find(scar20 => scar20.name === e.target.value);
+                                    if (selectedSCAR20) {
+                                        setImagemSCAR20(selectedSCAR20.image);
+                                    }
+                                }}
+                            >
+                                {SCAR20.map((scar20) => (
+                                    <option key={scar20.name} value={scar20.name}>
+                                        {scar20.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                    {isChecked && (
+                        <div className="ItemDaGaleria">
+                            <img src={ImagemG3SG1} alt="Selected G3SG1" />
+                            <select
+                                onChange={(e) => {
+                                    const selectedG3SG1 = G3SG1.find(g3sg1 => g3sg1.name === e.target.value);
+                                    if (selectedG3SG1) {
+                                        setImagemG3SG1(selectedG3SG1.image);
+                                    }
+                                }}
+                            >
+                                {G3SG1.map((g3sg1) => (
+                                    <option key={g3sg1.name} value={g3sg1.name}>
+                                        {g3sg1.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
             </body>
         </>
 
